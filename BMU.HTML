@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+	<title>Behavior Managment Unit</title>
+<body>
+	<a href="http://192.168.64.80/wordpress/" target="_blank">
+		<img src="DGSO_Banner_551x171.png" alt="DGSO">
+	</a>
+	<h1><abbr title="Behavior Managment Unit">BMU</abbr> Sanctions Point</h1>
+	<table>
+	<tr>
+		<th>Name</th>
+		<th>Name Number</th>
+		<th>Points</th>
+		<th>Current Color</th>
+		<th>Updated</th>
+		<th>By:</th>
+	</tr>
+	<?php
+	$servername = "104.154.158.50";
+	$username = "mhsnipeorama787@cloudshell";	
+	$password = "9HrgPrAlL9Eeafd5";
+	$dbname = "entries";
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+		
+	$sql = "SELECT * FROM entries";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		while($row = $result-> fetch_assoc()){
+			echo "<tr><td>" . row["iName"] . "</td><td>" . row["nNumber"] . "</td><td>" . row["iPoints"] . "</td><td>" . row["cColor"] . "</td><td>" . row["dUpdated"] . "</td><td>" . row["nOfficer"] . "</td></tr>"
+		}
+	}else {
+		echo "No Results";
+	}
+
+	$conn->close();
+	?>
+	</table>
+	
+
+
+
+
+
+
+
+
+
+<!--		<p>
+			<iframe src="BMU_Points.htm" style="border:none;height:500px;width:1000px;" title="BMU Points"></iframe>
+		</p> -->
+<!-- Comments Here -->
+	<br>
+	<p><sub>
+	<br>
+		<p id="demo">
+		<script>
+		document.getElementById("demo").innerHTML = Date();
+		</script>	
+		</p>
+		Created by S647
+	</sub></p>
+</body>
+</html>
