@@ -1,6 +1,4 @@
-# BMU
-This is for the Douglas County Sheriff's Office use only!
-This is a website created to ease the amount of locations the BMU operators need to go to change data.
-The following months will entail many edited version of documents and files, please be aware of those changes affecting the flow of work.
+# BMU - Behavior Mangament Unit
 
-This project is private so no one has access to it but myself and those who I've shared it with.
+This is a work in progress webpage for DGSO BMU. I am working to integrate multiple uses into this website.
+This is made public due to pull requests from my mobile editor due to it not being able to pull when the repo is private.
